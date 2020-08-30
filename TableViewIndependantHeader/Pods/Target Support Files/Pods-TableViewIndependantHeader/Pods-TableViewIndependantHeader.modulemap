@@ -1,0 +1,6 @@
+module Pods_TableViewIndependantHeader {
+  umbrella header "Pods-TableViewIndependantHeader-umbrella.h"
+
+  export *
+  module * { export * }
+}

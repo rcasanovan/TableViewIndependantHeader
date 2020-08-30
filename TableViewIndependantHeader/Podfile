@@ -1,0 +1,17 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '13.0'
+#use_frameworks!
+inhibit_all_warnings!
+use_modular_headers!
+
+#link_with 'TableViewIndependantHeader'
+
+def appPods                
+    #SnapKit
+    pod 'SnapKit', '~> 5.0.1'    
+end
+
+target 'TableViewIndependantHeader' do
+    appPods
+end
