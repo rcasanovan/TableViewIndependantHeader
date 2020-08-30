@@ -56,7 +56,7 @@ extension MainTableViewCell {
     
     private func configureSubviews() {
         titleLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .medium)
-        titleLabel.textColor = .white
+        titleLabel.textColor = .black
         
         separatorView.backgroundColor = .black
     }
