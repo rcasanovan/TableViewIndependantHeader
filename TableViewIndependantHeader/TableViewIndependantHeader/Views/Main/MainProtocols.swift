@@ -10,16 +10,16 @@ import Foundation
 
 // View / Presenter
 protocol MainViewInjection : class {
-    //__ Define your view protocols here
+    func loadItems(_ items: [MainViewModel])
 }
 
 protocol MainPresenterDelegate : class {
-    //__ Define your presenter protocols here
+    func viewDidLoad()
 }
 
 // Presenter / Interactor
 protocol MainInteractorDelegate : class {
-    //__ Define your interactor protocols here
+    func getItems() -> [MainViewModel]
 }
 
 // Presenter / Router

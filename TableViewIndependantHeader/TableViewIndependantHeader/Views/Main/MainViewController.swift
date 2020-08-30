@@ -61,5 +61,9 @@ extension MainViewController {
 
 // MARK: - MainViewInjection
 extension MainViewController: MainViewInjection {
-    //__ Implement your protocols here
+    
+    func loadItems(_ items: [MainViewModel]) {
+        
+    }
+    
 }

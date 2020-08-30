@@ -25,5 +25,10 @@ class MainPresenter {
 
 // MARK: - MainPresenterDelegate
 extension MainPresenter: MainPresenterDelegate {
-    //__ Implement your protocols here
+    
+    func viewDidLoad() {
+        let items = interactor.getItems()
+        view?.loadItems(items)
+    }
+    
 }

@@ -18,6 +18,7 @@
 		9237375224FBB917009FE2CC /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237374D24FBB917009FE2CC /* MainInteractor.swift */; };
 		92B6640324FBBB93005D2656 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6640224FBBB93005D2656 /* MainTableViewCell.swift */; };
 		92B6640624FBBC3C005D2656 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6640524FBBC3C005D2656 /* MainViewModel.swift */; };
+		92B6640824FBBE00005D2656 /* MainDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6640724FBBE00005D2656 /* MainDatasource.swift */; };
 		C672D62E5BF33268167F3B51 /* libPods-TableViewIndependantHeader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC6F26DF0EA7ED09F853826 /* libPods-TableViewIndependantHeader.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		9237374D24FBB917009FE2CC /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		92B6640224FBBB93005D2656 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		92B6640524FBBC3C005D2656 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		92B6640724FBBE00005D2656 /* MainDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDatasource.swift; sourceTree = "<group>"; };
 		A3F73A42BCF085484BA8935A /* Pods-TableViewIndependantHeader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewIndependantHeader.debug.xcconfig"; path = "Target Support Files/Pods-TableViewIndependantHeader/Pods-TableViewIndependantHeader.debug.xcconfig"; sourceTree = "<group>"; };
 		CAC6F26DF0EA7ED09F853826 /* libPods-TableViewIndependantHeader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TableViewIndependantHeader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 		92B6640124FBBB69005D2656 /* Datasource */ = {
 			isa = PBXGroup;
 			children = (
+				92B6640724FBBE00005D2656 /* MainDatasource.swift */,
 			);
 			path = Datasource;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				92B6640324FBBB93005D2656 /* MainTableViewCell.swift in Sources */,
 				9237375124FBB917009FE2CC /* MainProtocols.swift in Sources */,
 				9237374E24FBB917009FE2CC /* MainPresenter.swift in Sources */,
+				92B6640824FBBE00005D2656 /* MainDatasource.swift in Sources */,
 				9237373624FBB6B4009FE2CC /* SceneDelegate.swift in Sources */,
 				9237375224FBB917009FE2CC /* MainInteractor.swift in Sources */,
 				9237375024FBB917009FE2CC /* MainViewController.swift in Sources */,

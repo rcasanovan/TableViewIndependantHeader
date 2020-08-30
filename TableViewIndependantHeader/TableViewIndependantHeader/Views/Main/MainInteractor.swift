@@ -13,5 +13,9 @@ class MainInteractor {
 
 // MARK: - MainInteractorDelegate
 extension MainInteractor: MainInteractorDelegate {
-    //__ Implement your protocols here
+
+    func getItems() -> [MainViewModel] {
+        return MainViewModel.getViewModels()
+    }
+    
 }
