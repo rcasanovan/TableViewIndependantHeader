@@ -21,9 +21,10 @@ class MainRouter {
     /**
      Setup the initial module
      */
-    public static func setupModule(navigationController: UINavigationController? = nil) -> UIViewController {
-        //__ Add the implementation here to setup your module
-        return UIViewController()
+    public static func setupModule(navigationController: UINavigationController? = nil) -> MainViewController {
+        let mainVC = MainViewController()
+        mainVC.presenter = MainPresenter(view: mainVC)
+        return mainVC
     }
     
 }

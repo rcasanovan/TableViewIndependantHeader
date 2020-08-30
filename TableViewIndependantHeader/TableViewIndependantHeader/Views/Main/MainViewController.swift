@@ -30,6 +30,7 @@ extension MainViewController {
     private func setupViews() {
         //__ Configure your view here
         //__ Background color, title, safe area
+        view.backgroundColor = .yellow
         
         configureSubviews()
         addSubviews()

@@ -18,7 +18,7 @@ class MainPresenter {
     init(view: MainViewInjection, navigationController: UINavigationController? = nil) {
         self.view = view
         self.interactor = MainInteractor()
-        self.router = MainRouter(navigationController: navigationController)
+        self.router = MainRouter(view: view, navigationController: navigationController)
     }
     
 }
