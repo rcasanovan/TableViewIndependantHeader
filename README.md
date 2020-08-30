@@ -5,23 +5,23 @@ Create a UITableView with an independant header view
 ![alt tag](https://github.com/rcasanovan/TableViewIndependantHeader/blob/master/Images/image1.jpeg?raw=true)
 
 
-# Programming language && Development tools
+## Programming language && Development tools
 
-Swift 5
-Xcode 11.6
-Cocoapods 1.9.3
-Minimun iOS version: 13.0
+* Swift 5
+* Xcode 11.6
+* Cocoapods 1.9.3
+* Minimun iOS version: 13.0
 
-# Third-Party Libraries
+## Third-Party Libraries
 
-SnapKit (5.0.1): A Swift Autolayout DSL for iOS & OS X.
+* SnapKit (5.0.1): A Swift Autolayout DSL for iOS & OS X.
 
-# Support && contact
+## Support && contact
 
-## Email
+### Email
 
 You can contact me using my email: ricardo.casanova@outlook.com
 
-## Twitter
+### Twitter
 
 Follow me @rcasanovan on twitter.
