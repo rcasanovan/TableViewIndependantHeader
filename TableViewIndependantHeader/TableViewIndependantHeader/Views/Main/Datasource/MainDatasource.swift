@@ -21,6 +21,11 @@ class MainDatasource: NSObject {
 
 extension MainDatasource {
     
+    /**
+     Generate the cell
+     - parameter tableview: The tableview object
+     - parameter indexPath: The current index path for the tableview cell
+     */
     private func generateCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else {
             return UITableViewCell()

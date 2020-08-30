@@ -11,9 +11,12 @@ import UIKit
 //__ This class extends UIViewController. Feel free to modify it if needed
 class MainViewController: UIViewController {
     
+    private let mainHeaderView: MainHeaderView = MainHeaderView()
     private let containerView: UIView = UIView()
     private var tableView: UITableView?
     private var datasource: MainDatasource?
+    
+    private var previousOffset: CGFloat?
     
     public var presenter: MainPresenterDelegate?
     
@@ -54,15 +57,22 @@ extension MainViewController {
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.backgroundColor = .white
         tableView?.showsVerticalScrollIndicator = false
+        tableView?.delegate = self
         
         registerCells()
         setupDatasource()
     }
     
+    /**
+     Register cells
+    */
     private func registerCells() {
         tableView?.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
     }
     
+    /**
+     Setup the data source
+    */
     private func setupDatasource() {
         if let tableView = tableView {
             datasource = MainDatasource()
@@ -79,11 +89,18 @@ extension MainViewController {
      Add subviews
      */
     private func addSubviews() {
+        view.addSubview(mainHeaderView)
         view.addSubview(containerView)
+        
+        mainHeaderView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin).offset(0.0)
+            $0.height.equalTo(MainHeaderView.height)
+        }
         
         containerView.snp.makeConstraints {
             $0.left.right.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
+            $0.top.equalTo(mainHeaderView.snp.bottom)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)
         }
         
@@ -96,6 +113,17 @@ extension MainViewController {
         }
     }
 
+}
+
+// MARK: - UITableViewDelegate
+extension MainViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        mainHeaderView.snp.updateConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin).offset(-scrollView.contentOffset.y)
+        }
+    }
+    
 }
 
 // MARK: - MainViewInjection
