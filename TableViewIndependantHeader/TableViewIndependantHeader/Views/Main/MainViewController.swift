@@ -119,6 +119,13 @@ extension MainViewController {
 extension MainViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            return
+        }
+        
         mainHeaderView.snp.updateConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin).offset(-scrollView.contentOffset.y)
         }
